@@ -1,31 +1,20 @@
 {
   "private": true,
-  "name": "apollo-client-error-template",
+  "name": "apollo-client-error-tsinvariant-process-pkg",
   "version": "1.0.0",
   "license": "MIT",
+  "bin": "src/index.js",
   "dependencies": {
-    "@apollo/client": "^3.5.10",
-    "graphql": "^16.3.0",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "@apollo/client": "^3.3.21",
+    "graphql": "^15.5.0",
+    "pkg": "^5.5.2"
   },
   "devDependencies": {
     "customize-cra": "^1.0.0",
-    "react-app-rewired": "^2.2.1",
-    "react-scripts": "^5.0.0",
     "source-map-explorer": "^2.5.2",
     "stats-webpack-plugin": "^0.7.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-app-rewired build",
-    "analyze": "source-map-explorer 'build/static/js/*.js'",
-    "test": "react-scripts test --env=jsdom"
-  },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ]
+    "build": "pkg . --out-path dist"
+  }
 }
